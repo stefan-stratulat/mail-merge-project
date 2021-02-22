@@ -13,6 +13,15 @@ names = []
 with open('input/names/invited_names.txt') as file:
     file_lines = file.readlines()
     for line in file_lines:
+        line = line.strip('\n')
         names.append(line)
 
-print(names)
+#Read starting letter
+with open('input/letters/starting_letter.docx',) as file:
+        content = file.read()
+
+# #Replace the [name] placeholder with the actual name
+# for name in names:
+#     with open(f'output/readytosend/letter_{name}.docx',mode='w') as letter:
+#         letter.write(content)
+#         letter.replace('[name]',name)
